@@ -3,7 +3,7 @@ class Student:
         self.name = name
         self.age = age
         if not isinstance(grades, list):
-            raise TypeError("grades debe ser una lista")
+            raise TypeError("Grades have to be a list")
         self.grades = grades
 
     def add_grade(self, grade):
@@ -24,6 +24,9 @@ Student.add_grade(3.0)
 average = Student.average_grade()
 print(f"the average of the  {Student.name} is {average}")
 
+umbral=3.8
+
+best_students = [w for w in students if w.average_grade() >= umbral]
 
 
 
